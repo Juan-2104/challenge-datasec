@@ -1,0 +1,110 @@
+[
+  {
+    "information_type": "FIRST_NAME",
+    "pattern": "(?i)^(first_?name|fname|given_?name|forename)$",
+    "description": "Matches first name column patterns",
+    "priority": 90
+  },
+  {
+    "information_type": "LAST_NAME",
+    "pattern": "(?i)^(last_?name|lname|surname|family_?name)$",
+    "description": "Matches last name column patterns",
+    "priority": 90
+  },
+  {
+    "information_type": "FULL_NAME",
+    "pattern": "(?i)^(full_?name|name|display_?name|complete_?name)$",
+    "description": "Matches full name column patterns",
+    "priority": 85
+  },
+  {
+    "information_type": "USERNAME",
+    "pattern": "(?i)^(user_?name|username|login|handle|alias)$",
+    "description": "Matches username column patterns",
+    "priority": 80
+  },
+  {
+    "information_type": "EMAIL_ADDRESS",
+    "pattern": "(?i)^(email|email_?address|e_?mail|user_?email|contact_?email)$",
+    "description": "Matches email address column patterns",
+    "priority": 95
+  },
+  {
+    "information_type": "PHONE_NUMBER",
+    "pattern": "(?i)^(phone|phone_?number|telephone|tel|mobile|cell|contact_?number)$",
+    "description": "Matches phone number column patterns",
+    "priority": 90
+  },
+  {
+    "information_type": "CREDIT_CARD_NUMBER",
+    "pattern": "(?i)^(credit_?card|card_?number|cc_?number|payment_?card|card_?num)$",
+    "description": "Matches credit card number column patterns",
+    "priority": 100
+  },
+  {
+    "information_type": "ACCOUNT_NUMBER",
+    "pattern": "(?i)^(account_?number|account_?num|acc_?number|bank_?account)$",
+    "description": "Matches account number column patterns",
+    "priority": 95
+  },
+  {
+    "information_type": "SSN",
+    "pattern": "(?i)^(ssn|social_?security|social_?security_?number|sin)$",
+    "description": "Matches Social Security Number column patterns",
+    "priority": 100
+  },
+  {
+    "information_type": "PASSPORT_NUMBER",
+    "pattern": "(?i)^(passport|passport_?number|passport_?num|travel_?document)$",
+    "description": "Matches passport number column patterns",
+    "priority": 95
+  },
+  {
+    "information_type": "IP_ADDRESS",
+    "pattern": "(?i)^(ip|ip_?address|inet_?addr|network_?address)$",
+    "description": "Matches IP address column patterns",
+    "priority": 70
+  },
+  {
+    "information_type": "MAC_ADDRESS",
+    "pattern": "(?i)^(mac|mac_?address|hardware_?address|ether_?addr)$",
+    "description": "Matches MAC address column patterns",
+    "priority": 70
+  },
+  {
+    "information_type": "ADDRESS",
+    "pattern": "(?i)^(address|addr|street|home_?address|mailing_?address|residence)$",
+    "description": "Matches physical address column patterns",
+    "priority": 85
+  },
+  {
+    "information_type": "POSTAL_CODE",
+    "pattern": "(?i)^(postal_?code|zip_?code|zip|postcode|post_?code)$",
+    "description": "Matches postal/zip code column patterns",
+    "priority": 80
+  },
+  {
+    "information_type": "DATE_OF_BIRTH",
+    "pattern": "(?i)^(date_?of_?birth|dob|birth_?date|birthdate)$",
+    "description": "Matches date of birth column patterns",
+    "priority": 95
+  },
+  {
+    "information_type": "NATIONAL_ID",
+    "pattern": "(?i)^(national_?id|citizen_?id|id_?number|dni|cedula)$",
+    "description": "Matches national ID column patterns",
+    "priority": 95
+  },
+  {
+    "information_type": "BANK_ACCOUNT",
+    "pattern": "(?i)^(bank_?account|routing_?number|iban|swift|sort_?code)$",
+    "description": "Matches bank account related column patterns",
+    "priority": 95
+  },
+  {
+    "information_type": "DRIVER_LICENSE",
+    "pattern": "(?i)^(driver_?license|driving_?license|dl_?number|license_?num)$",
+    "description": "Matches driver license column patterns",
+    "priority": 90
+  }
+]

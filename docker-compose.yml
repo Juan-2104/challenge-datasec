@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  mysql_test:
+    image: mysql:8.0
+    container_name: database_classifier_mysql_test
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - classifier_network
+
+  app:
+    build: .
+    container_name: database_classifier_api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - GIN_MODE=release
+      - METADATA_DB_HOST=mysql_test
+      - METADATA_DB_PORT=3306
+      - METADATA_DB_USER=metauser
+      - METADATA_DB_PASSWORD=metapass
+      - METADATA_DB_NAME=classifier_meta
+      - METADATA_DB_PARAMS=parseTime=true&charset=utf8mb4&loc=UTC
+      - ENCRYPTION_KEY=my-super-secret-32-character-key
+      - JWT_SECRET=my-jwt-secret-key
+      - LOG_LEVEL=info
+      - LOG_FORMAT=json
+    depends_on:
+      - mysql_test
+    networks:
+      - classifier_network
+
+volumes:
+  mysql_data:
+
+networks:
+  classifier_network:
+    driver: bridge
