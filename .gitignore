@@ -1,0 +1,34 @@
+# Binaries
+main
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Build artifacts
+bin/
+*.out
+
+# Log files
+*.log
+
+# Environment files
+.env
+
+# IDE/Editor metadata
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+.DS_Store
+
+# Dependency directories
+go.sum
+vendor/
+
+# Coverage / test output
+coverage*
+
+# Docker
+**/.docker/

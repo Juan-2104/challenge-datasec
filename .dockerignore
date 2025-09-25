@@ -1,0 +1,31 @@
+# Go build artifacts
+bin
+main
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Dependency & vendor dirs
+vendor
+
+# Git
+.git
+.gitignore
+
+# IDE / editor files
+.vscode
+.idea
+*.iml
+*.swp
+*.swo
+.DS_Store
+
+# Environment files
+.env
+
+# Tests / coverage
+coverage*
+
+# Other
+README.md
